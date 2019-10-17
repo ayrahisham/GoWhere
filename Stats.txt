@@ -1,1 +1,32 @@
 Logins
+Logouts
+Time online
+Emails read
+Emails archived
+Emails drafted
+Emails closed
+Add image attachment
+Add video attachment
+Add audio attachment
+Add document attachment
+Emails sent
+Emails opened
+Emails deteled
+Emails spam
+Open inbox
+Open outbox
+Open trash
+Open spam
+Open sent
+Open draft
+Compose email
+Forward email
+Reply email
+Open primary tab
+Open social tab
+Open promotions tab
+Search emails
+Refresh emails
+Add contacts
+Edit contacts
+Delete contacts
