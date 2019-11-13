@@ -19,7 +19,7 @@
         </asp:TableRow>
         <asp:TableRow>
             <asp:TableCell>
-                <asp:Label ID="pass" type="pass" runat="server" Text="Password:"></asp:Label>
+                <asp:Label ID="pass" type="password" runat="server" Text="Password:"></asp:Label>
             </asp:TableCell>
             <asp:TableCell> 
                  <asp:TextBox ID="registerPwd" runat="server" Width="200px" ToolTip="Enter Password"></asp:TextBox>

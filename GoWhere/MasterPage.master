@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server" lang="en">
+    <meta charset ="utf-8" />
+    <title>GoWhere</title>
+    <asp:ContentPlaceHolder id="head" runat="server"></asp:ContentPlaceHolder>
+    <link href="~/CSS/master.css" rel="stylesheet" type="text/css" runat="server"/>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrapper">
+        <div id="banner">
+            <img src = "GoWhere/Images/banner.jpg" alt = "banner" height = "350" width = "1020">
+            <div class = "logo">    
+                <img src = "GoWhere/Images/logo.png" alt = "logo" height = "80" width = "220">
+				Share your local knowledge and lifestyles and connects with local people in local tour guide 
+            </div>
+            <div class = "promo">
+				NOVEMBER 2019 - BROWSE OVER 4000 TOURS - HAPPY HOLIDAYS!
+			</div>
+        </div>
+        <div class="navbar">
+            <div class="navbar-right"> 
+               <asp:ContentPlaceHolder ID="loginUser" runat="server">
+                   
+                </asp:ContentPlaceHolder> 
+			</div>
+            <asp:ContentPlaceHolder ID="menubar" runat="server">
+               
+            </asp:ContentPlaceHolder>	
+        </div>
+        <div id ="mainPage">
+            <asp:ContentPlaceHolder ID="content" runat="server">
+               
+            </asp:ContentPlaceHolder>
+        </div>
+          
+        <div class = "footer">
+        2019 &copy GoWhere Pte. Ltd. (incorporated in Singapore). Thank you for supporting local business.
+        </div>
+    </div>
+    </form>
+</body>
+</html>
