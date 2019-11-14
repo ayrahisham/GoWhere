@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="User Admin - Home" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="homeUA.aspx.cs" Inherits="homeUA" Debug="True"%>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>User Admin</u></b>
+    Logged in as <b><u>User Admin</u></b>
 </asp:Content> 
 
 <asp:Content ID ="menubarUA" ContentPlaceHolderID="menubar" runat="server">

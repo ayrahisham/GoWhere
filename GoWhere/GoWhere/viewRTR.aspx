@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tourist - View Ratings" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="viewRTR.aspx.cs" Inherits="viewRTR" Debug ="true"%>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>Tourist</u></b>
+    Logged in as <b><u>Tourist</u></b>
 </asp:Content> 
 
 <asp:Content ID ="menubarViewRTR" ContentPlaceHolderID="menubar" runat="server">

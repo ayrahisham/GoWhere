@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tourist - Home" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="homeTR.aspx.cs" Inherits="homeTR" Debug ="true"%>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>Tourist </u></b>
+    Logged in as <b><u>Tourist </u></b>
     <br />
     <img src = "GoWhere/Images/switch.png" height = "30" width = "30">
     <asp:HyperLink ID="switch" runat="server" NavigateUrl="~/homeTG.aspx"> SWITCH ACCOUNT </asp:HyperLink>

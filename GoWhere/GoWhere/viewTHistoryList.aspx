@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tour Guide - View Tour History List" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="viewTHistoryList.aspx.cs" Inherits="viewTHistoryList" Debug ="true"%>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>Tour Guide</u></b>
+    Logged in as <b><u>Tour Guide</u></b>
 </asp:Content> 
 
 <asp:Content ID ="menubarViewTHistList" ContentPlaceHolderID="menubar" runat="server">

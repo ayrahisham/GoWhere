@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tour Guide - View Tourist of Tour" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="viewTRofT.aspx.cs" Inherits="viewTRofT" %>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>Tour Guide</u></b>
+    Logged in as <b><u>Tour Guide</u></b>
 </asp:Content> 
 
 <asp:Content ID ="menubarViewTRofT" ContentPlaceHolderID="menubar" runat="server">

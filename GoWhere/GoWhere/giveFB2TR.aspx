@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tour Guide - Give Feedback to Tourist" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="giveFB2TR.aspx.cs" Inherits="giveFB2TR" Debug ="true"%>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>Tour Guide</u></b>
+    Logged in as <b><u>Tour Guide</u></b>
 </asp:Content> 
 
 <asp:Content ID ="menubargiveFB2TR" ContentPlaceHolderID="menubar" runat="server">

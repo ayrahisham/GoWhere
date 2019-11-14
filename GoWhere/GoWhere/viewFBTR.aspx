@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Tourist - View Feedback" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="viewFBTR.aspx.cs" Inherits="viewFBTR" Debug ="true"%>
 
 <asp:Content ID ="loginUser" ContentPlaceHolderID="loginUser" runat="server">
-    Logged in: <b><u>Tourist</u></b>
+    Logged in as <b><u>Tourist</u></b>
 </asp:Content> 
 
 <asp:Content ID ="menubarViewFBTR" ContentPlaceHolderID="menubar" runat="server">
