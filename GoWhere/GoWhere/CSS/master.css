@@ -1,0 +1,149 @@
+﻿body 
+{
+    background-color: black;
+    color: dimgrey;
+    font-family: 'Palatino Linotype';
+}
+
+/* web banner */
+#banner 
+{
+    font-weight: bold;
+    font-style: italic;
+    font-family: lucida;
+    font-size: 25px;
+    background-color: white;
+    text-align: right;
+}
+
+/* company logo */
+.logo 
+{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    color: darkslategrey;
+    font-family: 'Palatino Linotype';
+}
+
+/* promo */
+.promo 
+{
+    font-family: 'Comic Sans MS';
+    font-size: 30px;
+    text-align: center;
+    color: maroon;
+    background-color: mediumaquamarine;
+}
+
+#wrapper 
+{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 700px;
+    max-width: 1024px;
+    box-shadow: 3px 3px 3px #333333;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+/* navigation bar */
+.navbar 
+{
+    background-color: black;
+   /* overflow: hidden;*/
+}
+
+.navbar ul
+{
+    list-style-type: none;
+}
+
+.navbar-icon 
+{
+    display: inline-block;
+    width: 15px;
+    height: 20px;
+}
+
+/* navigation bar links */
+.navbar a 
+{
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* navigation bar links on mouse hover */
+.navbar a:hover 
+{
+    background-color: grey;
+    color: black;
+}
+
+/* visited navigation bar link */
+.navbar a:visited
+{
+    background-color: maroon;
+    color: white;
+}
+
+/* right-aligned navigation bar links*/
+.navbar-right 
+{
+    float: right;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+/* image gallery using a table */
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th 
+{
+    font-size: 25px;
+    background-color: darkcyan;
+    text-align: center;
+    color: saddlebrown;
+}
+
+td 
+{
+    padding: 8px;
+    font-size: 20px;
+    border-bottom: 1px solid darkcyan;
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    padding: 5px;
+    background-color: cadetblue;
+    color: black;
+}
+
+p 
+{
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+/* footer */
+.footer 
+{
+    font-style: oblique;
+    color: black;
+    font-size: 15px;
+    text-align: center;
+    background-color: lightgrey;
+}
