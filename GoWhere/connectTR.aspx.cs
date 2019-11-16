@@ -24,12 +24,18 @@ public partial class connectTR : System.Web.UI.Page
         String[] readerArr = booking_id.Split(';');
         Array.Resize(ref readerArr, readerArr.Length - 1);
         String bk_id = readerArr[0];
+        System.Diagnostics.Debug.WriteLine("booking results " + booking_id);
+        System.Diagnostics.Debug.WriteLine("TID " + TID);
+        System.Diagnostics.Debug.WriteLine("tour_id " + tour_id);
+        System.Diagnostics.Debug.WriteLine("booking_id " + bk_id);
+
+
 
         Session["booking_id"] = bk_id;
         
         Message m = new Message();
         int maxID = -1;
-        // String sender_id, String receiver_id, String booking_id, String sender_type, String receiver_type
+        //(String sender_id, String receiver_id, String booking_id, String sender_type, String receiver_type)
         maxID = m.getLatestMessageID(TID, tgid, bk_id, "TR", "TG");
         
         //String highestMessageID = "";
@@ -41,7 +47,7 @@ public partial class connectTR : System.Web.UI.Page
         //}
        if (maxID == -1)
         {
-            reply.Text = "";
+            reply.Text = "WRONG INDEX";
         }
        else
         {

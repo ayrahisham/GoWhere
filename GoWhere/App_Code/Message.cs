@@ -43,8 +43,8 @@ public class Message
         cmd.Parameters.AddWithValue("@tour_id", tour_id);
         cmd.Parameters.AddWithValue("@sender_type", "TR");
         cmd.Parameters.AddWithValue("@receiver_type", "TG");
-        cmd.Parameters.AddWithValue("@sender_id", tgid);
-        cmd.Parameters.AddWithValue("@receiver_id", TID);
+        cmd.Parameters.AddWithValue("@sender_id", TID);
+        cmd.Parameters.AddWithValue("@receiver_id", tgid);
         cmd.Parameters.AddWithValue("@message_date", message_date);
         cmd.Parameters.AddWithValue("@message", message);
         cmd.ExecuteNonQuery();
@@ -177,7 +177,7 @@ public class Message
         // establish connection  
         con.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("~/GoWhere/App_Data/Database.mdb");
         con.Open(); // connection open 
-        // SELECT message from Message WHERE sender_id = 1 AND sender_type = "TG" AND receiver_id = 473 AND receiver_type = "TR" AND message_id = (SELECT MAX(message_id) FROM Message);
+       
         sql = "SELECT MAX(message_id) FROM Message WHERE booking_id = @booking_id AND sender_id = @sender_id AND sender_type = @sender_type AND receiver_id = @receiver_id AND receiver_type = @receiver_type";
         OleDbCommand cmd = new OleDbCommand(sql, con);
         cmd.Parameters.AddWithValue("@booking_id", booking_id);
@@ -186,19 +186,20 @@ public class Message
         cmd.Parameters.AddWithValue("@receiver_id", receiver_id);
         cmd.Parameters.AddWithValue("@receiver_type", receiver_type);
 
-       // OleDbDataReader reader = cmd.ExecuteReader();
-        Int32 count = (Int32)cmd.ExecuteScalar();
+       
+        Int32 count = 0;
 
-        //String str = "";
-
-        //while (reader.Read())
-        //{
-        //    str += reader["message_id"].ToString() + ";";
-        //}
-        //reader.Close();
+        try
+        {
+            count = (Int32)cmd.ExecuteScalar();
+        }
+        catch(Exception e)
+        {
+            count = -1;
+        }
+        
         con.Close();
 
-        //return str;
         return count;
     }
 
@@ -210,7 +211,7 @@ public class Message
         // establish connection  
         con.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("~/GoWhere/App_Data/Database.mdb");
         con.Open(); // connection open 
-        // SELECT message from Message WHERE sender_id = 1 AND sender_type = "TG" AND receiver_id = 473 AND receiver_type = "TR" AND message_id = (SELECT MAX(message_id) FROM Message);
+       
         sql = "SELECT message FROM Message WHERE message_id = @maxID"; 
         OleDbCommand cmd = new OleDbCommand(sql, con);
         cmd.Parameters.AddWithValue("@maxID", maxID);

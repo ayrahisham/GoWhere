@@ -37,9 +37,10 @@ public partial class connectTG : System.Web.UI.Page
         int maxID = -1;
 
         // sender, receiver, booking, sender_type, receiver_type
+        // getLatestMessageID(String sender_id, String receiver_id,
+        // String booking_id, String sender_type, String receiver_type)
         maxID = m.getLatestMessageID(TGID_str, TID_str, BID, "TG", "TR");
-
-
+        System.Diagnostics.Debug.WriteLine(maxID);
         if (maxID == -1)
         {
             reply.Text = "";

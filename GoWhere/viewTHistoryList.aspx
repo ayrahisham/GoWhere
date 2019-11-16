@@ -47,11 +47,6 @@
             </asp:TableCell>
         </asp:TableRow>--%>
     </asp:Table>
-    <asp:Label ID="testing1" runat="server" />
-     <asp:Label ID="testing2" runat="server" />
-     <asp:Label ID="testing3" runat="server" />
-    <asp:Label ID="testing4" runat="server" />
-
 </asp:Content>
 
 

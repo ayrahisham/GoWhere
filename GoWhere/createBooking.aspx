@@ -8,7 +8,7 @@
     <ul>
        <li>
              <img src = "GoWhere/Images/back.png" height = "30" width = "30">
-             <asp:HyperLink ID="backViewT" runat="server" NavigateUrl="~/viewT.aspx"> BACK </asp:HyperLink>    
+             <asp:HyperLink ID="backViewT" runat="server" NavigateUrl="~/viewTourListByDate.aspx"> BACK </asp:HyperLink>    
        </li>
         <li>
              <img src = "GoWhere/Images/home.jpg" height = "30" width = "30">

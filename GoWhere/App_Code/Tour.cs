@@ -378,4 +378,61 @@ public class Tour
 
         return str;
     }
+
+    public String getTourDistinctDates()
+    {
+        string sql = string.Empty;
+        OleDbConnection con = new OleDbConnection();
+
+        // establish connection  
+        con.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("~/GoWhere/App_Data/Database.mdb");
+        con.Open(); // connection open 
+
+        sql = "SELECT DISTINCT date_start FROM TOUR where tour_status = @status";
+
+        OleDbCommand cmd = new OleDbCommand(sql, con);
+
+        cmd.Parameters.AddWithValue("@status", "Upcoming");
+
+        OleDbDataReader reader = cmd.ExecuteReader();
+
+        String str = "";
+
+        while (reader.Read())
+        {
+            str += (Convert.ToDateTime(reader["date_start"]).ToShortDateString()).ToString() + ";";
+        }
+
+        reader.Close();
+        con.Close();
+
+        return str;
+    }
+
+    public String getToursByDate(string date)
+    {
+        string sql = string.Empty;
+        OleDbConnection con = new OleDbConnection();
+
+        // establish connection  
+        con.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("~/GoWhere/App_Data/Database.mdb");
+        con.Open(); // connection open 
+        sql = "SELECT tour_id, date_start, tour_type, city_country, tour_status FROM Tour WHERE date_start = @date";
+        OleDbCommand cmd = new OleDbCommand(sql, con);
+        cmd.Parameters.AddWithValue("@date", date);
+
+        OleDbDataReader reader = cmd.ExecuteReader();
+
+        String str = "";
+
+        while (reader.Read())
+        {
+            str += reader["tour_id"].ToString() + ";" + (Convert.ToDateTime(reader["date_start"]).ToShortDateString()).ToString() + ";" + reader["tour_type"].ToString() + ";" + reader["city_country"].ToString() + ";" + reader["tour_status"].ToString() + ";";
+        }
+        reader.Close();
+        con.Close();
+
+        return str;
+    }
+
 }

@@ -635,10 +635,10 @@ public class Booking
         con.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + System.Web.HttpContext.Current.Server.MapPath("~/GoWhere/App_Data/Database.mdb");
         con.Open(); // connection open 
         // tourid, touristid, feedback --BOOKING TABLE
-        sql = "SELECT booking_id FROM Booking WHERE TID=? AND tour_id=tour_id";
+        sql = "SELECT booking_id FROM Booking WHERE TID=? AND tour_id=@tour_id";
         OleDbCommand cmd = new OleDbCommand(sql, con);
         cmd.Parameters.AddWithValue("?", TID);
-        cmd.Parameters.AddWithValue("tour_id", tour_id);
+        cmd.Parameters.AddWithValue("@tour_id", tour_id);
 
         OleDbDataReader reader = cmd.ExecuteReader();
 
